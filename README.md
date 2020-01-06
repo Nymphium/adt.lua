@@ -6,15 +6,15 @@ Algebraic Data Types for Lua
 ```lua
 local adt = require('adt')
 
-local optional = new('Some', 'None')
+local optional = adt.new('Some', 'None')
 local Some, None = optional.Some, optional.Some
 --[[ or you can write:
-local Some = new()
-local None = new()
+local Some = adt.new()
+local None = adt.new()
 --]]
 
 local r = Some(3)
-local v = match(r, {
+local v = adt.match(r, {
   { Some, function(v)
     return v + 10
   end },
