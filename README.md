@@ -7,7 +7,7 @@ Algebraic Data Types for Lua
 local adt = require('adt')
 
 local optional = adt.new('Some', 'None')
-local Some, None = optional.Some, optional.Some
+local Some, None = optional.Some, optional.None
 --[[ or you can write:
 local Some = adt.new()
 local None = adt.new()
