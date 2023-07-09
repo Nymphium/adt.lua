@@ -14,14 +14,14 @@ local None = adt.new()
 --]]
 
 local r = Some(3)
-local v = adt.match(r, {
+local v = adt.match(r,
   { Some, function(v)
     return v + 10
   end },
   { None, function()
     return 0
   end }
-})
+)
 
 print(v) --> 13
 ```

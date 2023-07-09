@@ -43,10 +43,10 @@ local function new(name, ...)
   })
 end
 
-local match = function(e, t)
+local match = function(e, ...)
   -- e = adt
-  -- t = {{adt, fun}, ...}
-  for _, tup in ipairs(t) do
+  -- ... = {adt, fun}, ...
+  for _, tup in ipairs{...} do
     if tup[1] ^ e then
       return tup[2](table.unpack(e))
     end
